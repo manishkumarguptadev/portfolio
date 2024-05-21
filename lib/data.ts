@@ -1,3 +1,6 @@
+import issuetracker from "@/public/issuetracker.png";
+import propertyrental from "@/public/propertyrental.png";
+
 export const links = [
   {
     name: "Home",
@@ -22,5 +25,24 @@ export const links = [
   {
     name: "Contact",
     hash: "#contact",
+  },
+];
+
+export const projectsData = [
+  {
+    title: "Property Rental",
+    description:
+      "A public web app for registering properties and finding the perfect rental property.",
+    tags: ["React", "TypeScript", "Next.js", "Tailwind", "MongoDB"],
+    imageUrl: propertyrental,
+    href: "https://property-rental.manishkumargupta.dev/",
+  },
+  {
+    title: "Issue Tracker",
+    description:
+      "An issue tracking system for submitting and assigning issues and tracking their status.",
+    tags: ["React", "TypeScript", "Next.js", "Tailwind", "PostgreSQL"],
+    imageUrl: issuetracker,
+    href: "https://issue-tracker.manishkumargupta.dev/",
   },
 ];
