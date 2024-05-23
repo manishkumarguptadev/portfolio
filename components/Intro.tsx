@@ -7,10 +7,14 @@ import { BsArrowRight } from "react-icons/bs";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
 import { HiDownload } from "react-icons/hi";
 import image from "@/public/image.png";
-
+import { useSectionInView } from "@/lib/hooks";
+import { useActiveSectionContext } from "@/context/ActiveSectionContext";
 function Intro() {
+  const { ref } = useSectionInView("Home", 0.5);
+  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
   return (
     <section
+      ref={ref}
       className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
       id="home"
     >
