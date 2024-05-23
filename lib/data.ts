@@ -46,3 +46,22 @@ export const projectsData = [
     href: "https://issue-tracker.manishkumargupta.dev/",
   },
 ];
+
+export const skillsData = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "TypeScript",
+  "React",
+  "Next.js",
+  "Shadcn/ui",
+  "Git",
+  "Tailwind",
+  "Prisma",
+  "PostgreSQL",
+  "MongoDB",
+  "Redux Toolkit",
+  "React Query",
+  "React Hook Form",
+  "Framer Motion",
+];
