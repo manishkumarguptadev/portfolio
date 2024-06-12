@@ -5,7 +5,7 @@ import { projectsData } from "@/lib/data";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-type ProjectProps = (typeof projectsData)[0];
+import { Project as ProjectType } from "@prisma/client";
 
 export default function Project({
   title,
@@ -13,7 +13,7 @@ export default function Project({
   tags,
   imageUrl,
   href,
-}: ProjectProps) {
+}: ProjectType) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -53,6 +53,8 @@ export default function Project({
 
           <Image
             src={imageUrl}
+            width={420}
+            height={420}
             alt="Project I worked on"
             quality={95}
             className="absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl

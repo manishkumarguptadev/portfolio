@@ -4,15 +4,19 @@ import Intro from "@/components/Intro";
 import Projects from "@/components/Projects";
 import SectionDivider from "@/components/SectionDivider";
 import Skills from "@/components/Skills";
+import prisma from "@/prisma/client";
+import { Skills as SkillsType } from "@prisma/client";
 
-function Home() {
+async function Home() {
+  const skills = (await prisma.skills.findFirst()) as SkillsType;
+  const projects = await prisma.project.findMany();
   return (
     <main className="flex flex-col items-center px-4">
       <Intro />
       <SectionDivider />
       <About />
-      <Projects />
-      <Skills />
+      <Projects projects={projects} />
+      <Skills skills={skills.devSkills} />
       <Contact />
     </main>
   );
